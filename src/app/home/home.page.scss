@@ -1,3 +1,7 @@
+ion-content {
+  --background: #e9d6a9;
+}
+
 #container {
   text-align: center;
 
@@ -24,4 +28,18 @@
 
 #container a {
   text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+ion-button {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 9px;
+}
+
+ion-card {
+  --background: #efefef;
 }

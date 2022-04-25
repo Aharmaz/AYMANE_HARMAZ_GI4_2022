@@ -1,0 +1,49 @@
+<ion-header></ion-header>
+
+
+<ion-content>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Ready to learn?</h1>
+      <h3>Sign in</h3>
+    </div>
+  </div>
+
+  <form [formGroup]="credentials" (ngSubmit)="login()">
+
+
+    <div class="wrapper">
+      <ion-card class="form-wrapper">
+        <ion-card-content>
+          <ion-item>
+            <ion-icon name="mail"></ion-icon>
+            <ion-input class="primary-input" type="email" type="email" placeholder="Email" formControlName="email"></ion-input>
+            <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="lock-closed"></ion-icon>
+            <ion-input class="primary-input" type="password" placeholder="Password" formControlName="password"></ion-input>
+            <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password</ion-note>
+          </ion-item>
+          <ion-button type="submit" expand="block">
+            Sign in
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <div class="line-text">
+        <span class="lines"></span>
+        <span class="text"><a routerLink="/register">Create an account</a></span>
+      </div>
+
+    </div>
+  
+  
+  </form>
+
+ 
+  
+
+</ion-content>
+

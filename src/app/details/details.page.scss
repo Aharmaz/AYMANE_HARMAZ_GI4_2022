@@ -1,0 +1,35 @@
+ion-card-title {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  .prodName {
+    font-weight: bold !important;
+    flex-grow: 2;
+    font-size: 18px;
+  }
+}
+
+.desc {
+  word-spacing: 1.5px;
+  color: black;
+  padding: 15px 0;
+  font-size: 1em;
+}
+
+.enroll-btn {
+  letter-spacing: 0.02em;
+  margin-top: 25px;
+  padding-top: 3px;
+}
+
+ion-chip {
+  margin-right: 0;
+}
+
+ion-content {
+  --background: #e9d6a9;
+}
+
+ion-card {
+  --background: #efefef;
+}

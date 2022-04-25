@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  items: Observable<any[]>;
+
+  constructor(
+    public firestore: AngularFirestore
+  ) {
+    this.items = this.firestore.collection("products").valueChanges();
+  }
 
 }

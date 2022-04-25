@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+  <ion-card>
+    <img [src]="itemImage">
+    <ion-card-content>
+      <ion-card-title>
+        <span class="prodName">{{itemTitle}}</span>
+        <ion-chip color="danger">{{itemCategory}}</ion-chip>
+      </ion-card-title>
+      <div class="desc">{{itemLongDescription}}</div>
+      <div class="learning">
+        <h3>What you will learn : </h3>
+        <p>&#10004; {{itemLearn1}}<br>&#10004; {{itemLearn2}}<br>&#10004; {{itemLearn3}}</p>
+      </div>
+      <ion-button expand="block" class="enroll-btn" [routerLink]="['/', 'billinginfo', itemTitle]">Enroll in Course For {{itemPrice}}$</ion-button>
+    </ion-card-content>
+  </ion-card>
+    
+</ion-content>
